@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { Link } from 'wouter';
 import { Menu, X } from 'lucide-react';
 
 export default function Navigation() {
@@ -22,18 +21,12 @@ export default function Navigation() {
           </a>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-1">
+          <div className="hidden md:flex items-center gap-2">
             <a href="/" className="px-4 py-2 text-sm font-medium text-gray-700 hover:text-blue-900 hover:bg-gray-50 rounded-md transition-colors duration-200">
               Home
             </a>
-            <a href="/about" className="px-4 py-2 text-sm font-medium text-gray-700 hover:text-blue-900 hover:bg-gray-50 rounded-md transition-colors duration-200">
-              About
-            </a>
-            <a href="/services" className="px-4 py-2 text-sm font-medium text-gray-700 hover:text-blue-900 hover:bg-gray-50 rounded-md transition-colors duration-200">
-              Services
-            </a>
             <a href="/contact" className="px-4 py-2 text-sm font-medium text-white bg-blue-900 hover:bg-blue-800 rounded-md transition-colors duration-200">
-              Contact
+              Get in Touch
             </a>
           </div>
 
@@ -55,14 +48,8 @@ export default function Navigation() {
             <a href="/" onClick={closeMenu} className="block px-4 py-2 text-sm font-medium text-gray-700 hover:text-blue-900 hover:bg-gray-50 rounded-md transition-colors">
               Home
             </a>
-            <a href="/about" onClick={closeMenu} className="block px-4 py-2 text-sm font-medium text-gray-700 hover:text-blue-900 hover:bg-gray-50 rounded-md transition-colors">
-              About
-            </a>
-            <a href="/services" onClick={closeMenu} className="block px-4 py-2 text-sm font-medium text-gray-700 hover:text-blue-900 hover:bg-gray-50 rounded-md transition-colors">
-              Services
-            </a>
             <a href="/contact" onClick={closeMenu} className="block px-4 py-2 text-sm font-medium text-white bg-blue-900 hover:bg-blue-800 rounded-md transition-colors">
-              Contact
+              Get in Touch
             </a>
           </div>
         </div>

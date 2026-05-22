@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import { Mail, Phone, MapPin } from 'lucide-react';
+import { Mail, Phone, MapPin, ArrowRight } from 'lucide-react';
 import { toast } from 'sonner';
 
 export default function Contact() {
@@ -60,11 +60,11 @@ export default function Contact() {
 
       <main className="flex-grow">
         {/* Hero Section */}
-        <section className="bg-gradient-to-r from-blue-900 to-blue-800 text-white py-16 md:py-24">
+        <section className="bg-gradient-to-r from-blue-900 to-blue-800 text-white py-20 md:py-32">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">Get in Touch</h1>
-            <p className="text-xl text-blue-100">
-              Let us help you build your compliance foundation
+            <h1 className="text-5xl md:text-6xl font-bold mb-6">Get in Touch</h1>
+            <p className="text-xl md:text-2xl text-blue-100">
+              Let us help you navigate the complexity of Quality and Regulatory Affairs
             </p>
           </div>
         </section>
@@ -72,15 +72,15 @@ export default function Contact() {
         {/* Contact Information */}
         <section className="py-20 md:py-28 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-20">
               <div className="text-center">
                 <div className="flex justify-center mb-4">
-                  <Mail className="text-yellow-500" size={32} />
+                  <Mail className="text-yellow-500" size={40} />
                 </div>
-                <h3 className="text-xl font-semibold text-blue-900 mb-2">Email</h3>
+                <h3 className="text-xl font-bold text-blue-900 mb-2">Email</h3>
                 <a
                   href="mailto:genevieve@qrastrategies.com"
-                  className="text-gray-700 hover:text-blue-900 transition-colors"
+                  className="text-gray-700 hover:text-blue-900 transition-colors text-lg"
                 >
                   genevieve@qrastrategies.com
                 </a>
@@ -88,20 +88,20 @@ export default function Contact() {
 
               <div className="text-center">
                 <div className="flex justify-center mb-4">
-                  <Phone className="text-yellow-500" size={32} />
+                  <Phone className="text-yellow-500" size={40} />
                 </div>
-                <h3 className="text-xl font-semibold text-blue-900 mb-2">Phone</h3>
-                <p className="text-gray-700">
+                <h3 className="text-xl font-bold text-blue-900 mb-2">Phone</h3>
+                <p className="text-gray-700 text-lg">
                   Available by appointment
                 </p>
               </div>
 
               <div className="text-center">
                 <div className="flex justify-center mb-4">
-                  <MapPin className="text-yellow-500" size={32} />
+                  <MapPin className="text-yellow-500" size={40} />
                 </div>
-                <h3 className="text-xl font-semibold text-blue-900 mb-2">Location</h3>
-                <p className="text-gray-700">
+                <h3 className="text-xl font-bold text-blue-900 mb-2">Location</h3>
+                <p className="text-gray-700 text-lg">
                   Serving MedTech companies nationwide
                 </p>
               </div>
@@ -109,15 +109,15 @@ export default function Contact() {
 
             {/* Contact Form */}
             <div className="max-w-2xl mx-auto">
-              <div className="mb-8">
+              <div className="mb-12">
                 <p className="text-lg text-gray-700 leading-relaxed">
                   We are here to help you navigate the complexity of Quality and Regulatory Affairs. Whether you are just starting your compliance journey or looking to optimize your existing systems, we would love to discuss how we can support your organization. Fill out the form below and we will be in touch shortly to schedule a consultation.
                 </p>
               </div>
 
-              <form onSubmit={handleSubmit} className="space-y-6 bg-gray-50 p-8 rounded-lg border border-gray-200">
+              <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-semibold text-blue-900 mb-2">
+                  <label htmlFor="name" className="block text-sm font-bold text-blue-900 mb-2">
                     Name
                   </label>
                   <input
@@ -127,13 +127,13 @@ export default function Contact() {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent bg-white text-gray-900"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent bg-white text-gray-900 placeholder-gray-500"
                     placeholder="Your name"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="company" className="block text-sm font-semibold text-blue-900 mb-2">
+                  <label htmlFor="company" className="block text-sm font-bold text-blue-900 mb-2">
                     Company
                   </label>
                   <input
@@ -143,13 +143,13 @@ export default function Contact() {
                     value={formData.company}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent bg-white text-gray-900"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent bg-white text-gray-900 placeholder-gray-500"
                     placeholder="Your company name"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="block text-sm font-semibold text-blue-900 mb-2">
+                  <label htmlFor="email" className="block text-sm font-bold text-blue-900 mb-2">
                     Email
                   </label>
                   <input
@@ -159,13 +159,13 @@ export default function Contact() {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent bg-white text-gray-900"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent bg-white text-gray-900 placeholder-gray-500"
                     placeholder="your.email@company.com"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-semibold text-blue-900 mb-2">
+                  <label htmlFor="message" className="block text-sm font-bold text-blue-900 mb-2">
                     Message
                   </label>
                   <textarea
@@ -175,7 +175,7 @@ export default function Contact() {
                     onChange={handleChange}
                     required
                     rows={6}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent bg-white text-gray-900 resize-none"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent bg-white text-gray-900 placeholder-gray-500 resize-none"
                     placeholder="Tell us about your Quality and Regulatory Affairs needs..."
                   />
                 </div>
@@ -183,9 +183,10 @@ export default function Contact() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-blue-900 hover:bg-blue-800 text-white font-semibold px-6 py-4 text-lg rounded-lg transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full button-secondary text-lg py-4 flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {isSubmitting ? 'Sending...' : 'Send Message'}
+                  {!isSubmitting && <ArrowRight size={20} />}
                 </button>
               </form>
             </div>
