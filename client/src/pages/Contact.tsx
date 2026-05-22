@@ -27,7 +27,7 @@ export default function Contact() {
     setSubmitMessage('');
 
     try {
-      const response = await fetch('/api/contact', {
+      const response = await fetch('https://formspree.io/f/xyzpqrst', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -51,47 +51,28 @@ export default function Contact() {
   return (
     <div className="min-h-screen flex flex-col bg-white">
       <Navigation />
-
-      <main>
-        {/* Contact Header */}
-        <section className="bg-white" style={{ paddingTop: '1.5rem', paddingBottom: '1rem' }}>
-          <div className="section-container" style={{ textAlign: 'center' }}>
-            <h1 style={{ fontSize: '2.25rem', fontWeight: '700', color: '#0B2341', marginBottom: '0.5rem' }}>
-              Contact QRA Strategies
-            </h1>
-          </div>
-        </section>
-
-        {/* Email Contact */}
-        <section className="bg-light" style={{ paddingTop: '1rem', paddingBottom: '1rem' }}>
-          <div className="section-container" style={{ textAlign: 'center' }}>
-            <p style={{ fontSize: '0.875rem', fontWeight: '600', textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '0.5rem', color: '#0B2341' }}>
-              Email
+      <main className="flex-1 w-full">
+        <section className="py-12 px-4 bg-white">
+          <div className="max-w-2xl mx-auto">
+            <h1 className="text-4xl font-bold text-navy-dark mb-4">Contact QRA Strategies</h1>
+            <p className="text-lg text-gray-700 mb-8">
+              Reach out to discuss your compliance strategy and how we can support your regulatory journey.
             </p>
-            <p style={{ fontSize: '1.125rem', marginBottom: '0' }}>
-              <a href="mailto:genevieve@qrastrategies.com" style={{ color: '#CBA052', fontWeight: '600' }}>
+
+            <div className="mb-8 p-6 bg-gray-50 rounded-lg border border-gray-200">
+              <p className="text-center text-gray-800 font-semibold">
+                Email us directly at
+              </p>
+              <p className="text-center text-2xl font-bold text-gold mt-2">
                 genevieve@qrastrategies.com
-              </a>
-            </p>
-          </div>
-        </section>
+              </p>
+            </div>
 
-        {/* Contact Form */}
-        <section className="bg-white" style={{ paddingTop: '1.5rem', paddingBottom: '1.5rem' }}>
-          <div className="section-container">
-            <h2 style={{ fontSize: '1.5rem', fontWeight: '700', color: '#0B2341', marginBottom: '1.5rem', textAlign: 'center' }}>
-              Send us a Message
-            </h2>
-            
-            <form onSubmit={handleSubmit}>
-              {submitMessage && (
-                <div className={`form-message ${submitMessage.includes('error') ? 'error' : 'success'}`}>
-                  {submitMessage}
-                </div>
-              )}
-
+            <form onSubmit={handleSubmit} className="space-y-6">
               <div className="form-group">
-                <label htmlFor="name">Name</label>
+                <label htmlFor="name" className="block text-sm font-semibold text-navy-dark mb-2">
+                  Name
+                </label>
                 <input
                   type="text"
                   id="name"
@@ -99,12 +80,15 @@ export default function Contact() {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  aria-label="Full name"
+                  className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent"
+                  placeholder="Your name"
                 />
               </div>
 
               <div className="form-group">
-                <label htmlFor="company">Company</label>
+                <label htmlFor="company" className="block text-sm font-semibold text-navy-dark mb-2">
+                  Company
+                </label>
                 <input
                   type="text"
                   id="company"
@@ -112,12 +96,15 @@ export default function Contact() {
                   value={formData.company}
                   onChange={handleChange}
                   required
-                  aria-label="Company name"
+                  className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent"
+                  placeholder="Your company"
                 />
               </div>
 
               <div className="form-group">
-                <label htmlFor="email">Work Email</label>
+                <label htmlFor="email" className="block text-sm font-semibold text-navy-dark mb-2">
+                  Work Email
+                </label>
                 <input
                   type="email"
                   id="email"
@@ -125,47 +112,45 @@ export default function Contact() {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  aria-label="Work email address"
+                  className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent"
+                  placeholder="your.email@company.com"
                 />
               </div>
 
               <div className="form-group">
-                <label htmlFor="message">Message</label>
+                <label htmlFor="message" className="block text-sm font-semibold text-navy-dark mb-2">
+                  Message
+                </label>
                 <textarea
                   id="message"
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
                   required
-                  rows={5}
-                  aria-label="Your message"
-                ></textarea>
+                  rows={6}
+                  className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent resize-none"
+                  placeholder="Tell us about your compliance needs"
+                />
               </div>
+
+              {submitMessage && (
+                <div className={`p-4 rounded-lg ${submitMessage.includes('error') ? 'bg-red-50 text-red-800' : 'bg-green-50 text-green-800'}`}>
+                  {submitMessage}
+                </div>
+              )}
 
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="btn btn-primary"
+                className="button-primary w-full py-3 px-6 bg-gold text-white font-semibold rounded-lg hover:bg-gold-dark transition-all duration-200 flex items-center justify-center gap-2 disabled:opacity-50"
               >
-                {isSubmitting ? 'Sending...' : 'Send Inquiry'}
-                {!isSubmitting && <ArrowRight size={20} />}
+                {isSubmitting ? 'Sending...' : 'Send Message'}
+                <ArrowRight size={20} />
               </button>
             </form>
-
-            {/* Service Schema Markup */}
-            <script type="application/ld+json">
-              {JSON.stringify({
-                "@context": "https://schema.org",
-                "@type": "ContactPoint",
-                "contactType": "Customer Service",
-                "email": "genevieve@qrastrategies.com",
-                "availableLanguage": "en"
-              })}
-            </script>
           </div>
         </section>
       </main>
-
       <Footer />
     </div>
   );
