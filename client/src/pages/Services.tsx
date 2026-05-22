@@ -32,24 +32,24 @@ const services = [
 
 export default function Services() {
   return (
-    <div className="min-h-screen flex flex-col bg-background">
+    <div className="min-h-screen flex flex-col bg-white">
       <Navigation />
 
       <main className="flex-grow">
         {/* Hero Section */}
-        <section className="bg-gradient-to-r from-primary to-primary/80 text-primary-foreground py-16 md:py-24">
-          <div className="container">
-            <h1 className="text-4xl md:text-5xl font-bold">Our Services</h1>
-            <p className="text-xl mt-4 opacity-95">
+        <section className="bg-gradient-to-r from-blue-900 to-blue-800 text-white py-16 md:py-24">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">Our Services</h1>
+            <p className="text-xl text-blue-100">
               Comprehensive Quality and Regulatory Affairs Solutions for MedTech
             </p>
           </div>
         </section>
 
         {/* Services Overview */}
-        <section className="section-padding bg-white">
-          <div className="container">
-            <p className="text-lg text-foreground/80 mb-12 max-w-3xl">
+        <section className="py-20 md:py-28 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <p className="text-lg text-gray-700 mb-12 max-w-3xl leading-relaxed">
               We provide end to end Quality and Regulatory Affairs services designed to support your organization at every stage of product development and commercialization. Our core competencies span Quality Management System design, regulatory submissions, operations, and supplier management.
             </p>
 
@@ -57,16 +57,16 @@ export default function Services() {
               {services.map((service, index) => (
                 <div
                   key={index}
-                  className="bg-background border border-border rounded-lg p-8 hover:shadow-lg transition-shadow"
+                  className="bg-white border border-gray-200 rounded-lg p-8 hover:shadow-lg transition-shadow"
                 >
                   <div className="flex items-start gap-4 mb-4">
-                    <CheckCircle2 className="text-accent flex-shrink-0 mt-1" size={28} />
-                    <h2 className="text-2xl md:text-3xl font-bold text-primary">
+                    <CheckCircle2 className="text-yellow-500 flex-shrink-0 mt-1" size={28} />
+                    <h2 className="text-2xl md:text-3xl font-bold text-blue-900">
                       {service.title}
                     </h2>
                   </div>
 
-                  <p className="text-foreground/80 mb-6 text-lg">
+                  <p className="text-gray-700 mb-6 text-lg leading-relaxed">
                     {service.description}
                   </p>
 
@@ -74,7 +74,7 @@ export default function Services() {
                     {service.standards.map((standard, idx) => (
                       <span
                         key={idx}
-                        className="inline-block bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium"
+                        className="inline-block bg-blue-50 text-blue-900 px-4 py-2 rounded-full text-sm font-medium border border-blue-200"
                       >
                         {standard}
                       </span>
@@ -87,45 +87,45 @@ export default function Services() {
         </section>
 
         {/* Why Choose Us */}
-        <section className="section-padding bg-primary/5">
-          <div className="container max-w-3xl">
-            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-primary">
+        <section className="py-20 md:py-28 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 max-w-3xl">
+            <h2 className="text-3xl md:text-4xl font-bold mb-12 text-blue-900">
               Why Choose QRA Strategies
             </h2>
 
-            <div className="space-y-6 text-foreground/80">
+            <div className="space-y-8">
               <div>
-                <h3 className="text-xl font-semibold text-primary mb-2">
+                <h3 className="text-xl font-semibold text-blue-900 mb-3">
                   Regulatory Expertise
                 </h3>
-                <p>
+                <p className="text-gray-700 leading-relaxed">
                   Our team brings deep experience with FDA, international regulatory bodies, and notified bodies. We understand the nuances of different regulatory pathways and help you choose the right strategy for your product.
                 </p>
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold text-primary mb-2">
+                <h3 className="text-xl font-semibold text-blue-900 mb-3">
                   Operational Focus
                 </h3>
-                <p>
+                <p className="text-gray-700 leading-relaxed">
                   We do not just build compliance systems, we build systems that work. Our Quality Management Systems are designed for operational efficiency and regulatory readiness.
                 </p>
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold text-primary mb-2">
+                <h3 className="text-xl font-semibold text-blue-900 mb-3">
                   Startup Perspective
                 </h3>
-                <p>
+                <p className="text-gray-700 leading-relaxed">
                   We understand the constraints of early stage MedTech companies. We right size our solutions to your stage of development and resource availability.
                 </p>
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold text-primary mb-2">
+                <h3 className="text-xl font-semibold text-blue-900 mb-3">
                   Continuity and Partnership
                 </h3>
-                <p>
+                <p className="text-gray-700 leading-relaxed">
                   As your fractional bench, we maintain continuity throughout your development cycle. We are invested in your success and committed to your long term compliance and operational excellence.
                 </p>
               </div>
@@ -134,18 +134,16 @@ export default function Services() {
         </section>
 
         {/* Call to Action */}
-        <section className="section-padding bg-gradient-to-r from-primary to-primary/80 text-primary-foreground">
-          <div className="container text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-primary-foreground">
+        <section className="py-20 md:py-28 bg-gradient-to-r from-blue-900 to-blue-800 text-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Let us Help You Build Your Compliance Foundation
             </h2>
-            <p className="text-lg mb-8 opacity-95 max-w-2xl mx-auto">
+            <p className="text-lg mb-8 text-blue-100 max-w-2xl mx-auto leading-relaxed">
               Contact us today to discuss your Quality and Regulatory Affairs needs.
             </p>
-            <a href="/contact">
-              <button className="button-primary bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-4 text-lg font-semibold rounded-md transition-colors">
-                Schedule a Consultation
-              </button>
+            <a href="/contact" className="inline-block bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-semibold px-8 py-4 rounded-lg transition-colors duration-200">
+              Schedule a Consultation
             </a>
           </div>
         </section>
