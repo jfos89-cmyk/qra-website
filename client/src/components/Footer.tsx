@@ -29,17 +29,7 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Email Contact */}
-          <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
-            <p style={{ marginBottom: '0.5rem', fontSize: '0.875rem', fontWeight: '600', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
-              Contact
-            </p>
-            <p>
-              <a href="mailto:genevieve@qrastrategies.com">
-                genevieve@qrastrategies.com
-              </a>
-            </p>
-          </div>
+
         </div>
 
         {/* Copyright */}
