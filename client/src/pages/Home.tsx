@@ -109,33 +109,39 @@ export default function Home() {
             
             <div className="grid grid-2">
               <div className="card">
-                <h3>Right Sized QMS Build and Certification</h3>
-                <p>ISO 13485:2016 and MDSAP certification tailored to your organization</p>
+                <h3>Strategy and Planning</h3>
+                <ul className="list">
+                  <li>Regulatory pathway selection and submission execution for 510(k), De Novo, PMA, and CE Mark</li>
+                  <li>Quality system architecture optimized for scale and exit readiness</li>
+                  <li>Pre submission planning and direct FDA engagement strategy</li>
+                  <li>Diligence preparation and compliance remediation</li>
+                </ul>
               </div>
 
               <div className="card">
-                <h3>CE Mark Execution</h3>
-                <p>Technical file creation and notified body coordination for European market entry</p>
+                <h3>Quality Systems and Certification</h3>
+                <ul className="list">
+                  <li>Right sized QMS build out and certification for ISO 13485:2016 and MDSAP</li>
+                  <li>CE Mark execution and technical file creation</li>
+                  <li>Deep specialization in ISO 14971 risk management</li>
+                </ul>
               </div>
 
               <div className="card">
-                <h3>Audit Preparation and FDA Inspection Response</h3>
-                <p>Form 483 remediation and comprehensive inspection readiness</p>
+                <h3>Submissions and Audits</h3>
+                <ul className="list">
+                  <li>Audit preparation and FDA inspection readiness</li>
+                  <li>Form 483 remediation and response execution</li>
+                </ul>
               </div>
 
               <div className="card">
-                <h3>Risk Management Specialization</h3>
-                <p>Comprehensive risk analysis and mitigation strategies</p>
-              </div>
-
-              <div className="card">
-                <h3>Device History Record Operations</h3>
-                <p>Complete traceability from procurement through final device distribution and production equipment qualification</p>
-              </div>
-
-              <div className="card">
-                <h3>Configuration Management and Supplier Quality</h3>
-                <p>Change control procedures, design history file management, and supplier audits</p>
+                <h3>Operations and Supply Chain</h3>
+                <ul className="list">
+                  <li>Device History Record operations and production equipment qualification</li>
+                  <li>Configuration management and document change analysis</li>
+                  <li>Supplier quality engineering and evaluations</li>
+                </ul>
               </div>
             </div>
           </div>
