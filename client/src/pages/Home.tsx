@@ -1,6 +1,6 @@
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import { ArrowRight, CheckCircle2 } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { useState } from 'react';
 
 export default function Home() {
@@ -146,11 +146,15 @@ export default function Home() {
           <div className="section-container">
             <h2 className="section-title">Schedule Your Initial Compliance Assessment</h2>
             
-            <form onSubmit={handleSubmit} className="max-w-2xl mx-auto">
-              <div className="mb-6">
-                <label htmlFor="name" className="block text-sm font-medium mb-2">
-                  Name
-                </label>
+            <form onSubmit={handleSubmit}>
+              {submitMessage && (
+                <div className={`form-message ${submitMessage.includes('error') ? 'error' : 'success'}`}>
+                  {submitMessage}
+                </div>
+              )}
+
+              <div className="form-group">
+                <label htmlFor="name">Name</label>
                 <input
                   type="text"
                   id="name"
@@ -158,14 +162,11 @@ export default function Home() {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500"
                 />
               </div>
 
-              <div className="mb-6">
-                <label htmlFor="company" className="block text-sm font-medium mb-2">
-                  Company
-                </label>
+              <div className="form-group">
+                <label htmlFor="company">Company</label>
                 <input
                   type="text"
                   id="company"
@@ -173,14 +174,11 @@ export default function Home() {
                   value={formData.company}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500"
                 />
               </div>
 
-              <div className="mb-6">
-                <label htmlFor="email" className="block text-sm font-medium mb-2">
-                  Email
-                </label>
+              <div className="form-group">
+                <label htmlFor="email">Work Email</label>
                 <input
                   type="email"
                   id="email"
@@ -188,35 +186,24 @@ export default function Home() {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500"
                 />
               </div>
 
-              <div className="mb-6">
-                <label htmlFor="message" className="block text-sm font-medium mb-2">
-                  Message
-                </label>
+              <div className="form-group">
+                <label htmlFor="message">Message</label>
                 <textarea
                   id="message"
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
                   required
-                  rows={5}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500"
                 />
               </div>
-
-              {submitMessage && (
-                <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-md text-green-800">
-                  {submitMessage}
-                </div>
-              )}
 
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full btn btn-primary justify-center disabled:opacity-50 disabled:cursor-not-allowed"
+                className="btn btn-primary"
               >
                 {isSubmitting ? 'Sending...' : 'Schedule Assessment'}
                 {!isSubmitting && <ArrowRight size={20} />}
