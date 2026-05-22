@@ -55,3 +55,4 @@
 - [x] Add hover effects to Schedule a Consultation buttons
 - [x] Add shadow and lift effects on button hover
 - [x] Add active state animations for buttons
+- [x] Fix horizontal scrolling issue by adding overflow-x hidden to html and body

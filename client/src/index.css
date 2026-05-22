@@ -115,6 +115,7 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
   }
   * {
     border-color: var(--border);
@@ -126,6 +127,7 @@
     color: var(--foreground);
     font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
     line-height: 1.6;
+    overflow-x: hidden;
   }
   h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
