@@ -27,15 +27,24 @@ export default function Home() {
     setSubmitMessage('');
 
     try {
-      const response = await fetch('/api/contact', {
+      const response = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          'Accept': 'application/json',
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          access_key: '9e626bb1-9c8e-45cf-85d0-8110c919e42c',
+          subject: 'New Contact Form Submission - QRA Strategies',
+          from_name: 'QRA Strategies Website',
+          ...formData,
+          botcheck: '',
+        }),
       });
 
-      if (response.ok) {
+      const result = await response.json();
+
+      if (result.success) {
         setSubmitMessage('Thank you for your inquiry. We will be in touch shortly.');
         setFormData({ name: '', company: '', email: '', message: '' });
       } else {
