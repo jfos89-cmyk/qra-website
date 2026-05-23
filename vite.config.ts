@@ -4,7 +4,7 @@ import path from "node:path";
 import { defineConfig } from "vite";
 
 export default defineConfig({
-  base: process.env.NODE_ENV === 'production' ? '/qra-strategies-web/' : '/',
+  base: '/',
   plugins: [react(), tailwindcss()],
   resolve: {
     alias: {
