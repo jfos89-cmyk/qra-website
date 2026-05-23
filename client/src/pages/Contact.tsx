@@ -151,7 +151,8 @@ export default function Contact() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="button-primary w-full py-3 px-6 bg-gold text-white font-semibold rounded-lg hover:bg-gold-dark transition-all duration-200 flex items-center justify-center gap-2 disabled:opacity-50"
+                className="btn btn-primary"
+                style={{ width: '100%', justifyContent: 'center' }}
               >
                 {isSubmitting ? 'Sending...' : 'Send Message'}
                 <ArrowRight size={20} />
