@@ -596,4 +596,18 @@ form .btn-primary {
   .hero p {
     font-size: 1rem;
   }
+
+  /* Fix button overflow on mobile */
+  .btn {
+    white-space: normal;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  .hero-content .btn {
+    display: flex;
+    width: 100%;
+  }
 }
