@@ -21,6 +21,8 @@ export default function Navigation() {
         {/* Desktop Navigation */}
         <div className="nav-links">
           <a href="/">Home</a>
+          <a href="/about">About</a>
+          <a href="/services">Services</a>
           <a href="/contact">Get in Touch</a>
         </div>
 
@@ -40,6 +42,12 @@ export default function Navigation() {
           <div className="mobile-menu-content">
             <a href="/" onClick={closeMenu}>
               Home
+            </a>
+            <a href="/about" onClick={closeMenu}>
+              About
+            </a>
+            <a href="/services" onClick={closeMenu}>
+              Services
             </a>
             <a href="/contact" onClick={closeMenu}>
               Get in Touch

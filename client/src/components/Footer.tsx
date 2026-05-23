@@ -18,9 +18,15 @@ export default function Footer() {
           <div style={{ display: 'flex', justifyContent: 'center', gap: '3rem', flexWrap: 'wrap', marginBottom: '2rem' }}>
             <div className="footer-section" style={{ textAlign: 'center' }}>
               <h4 style={{ marginBottom: '0.75rem' }}>Quick Links</h4>
-              <ul style={{ listStyle: 'none', display: 'flex', gap: '1.5rem', justifyContent: 'center' }}>
+              <ul style={{ listStyle: 'none', display: 'flex', gap: '1.5rem', justifyContent: 'center', flexWrap: 'wrap' }}>
                 <li>
                   <a href="/">Home</a>
+                </li>
+                <li>
+                  <a href="/about">About</a>
+                </li>
+                <li>
+                  <a href="/services">Services</a>
                 </li>
                 <li>
                   <a href="/contact">Get in Touch</a>
