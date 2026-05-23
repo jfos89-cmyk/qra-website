@@ -1,8 +1,15 @@
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { AlertCircle, Lightbulb, Users } from 'lucide-react';
+import { usePageMeta } from '@/hooks/usePageMeta';
 
 export default function About() {
+  usePageMeta({
+    title: 'About QRA Strategies — Medical Device Regulatory Experts',
+    description: 'Learn about QRA Strategies LLC, our mission, and our approach to building audit-ready Quality Management Systems for MedTech startups.',
+    canonical: 'https://qrastrategies.com/about',
+  });
+
   return (
     <div className="min-h-screen flex flex-col bg-white">
       <Navigation />

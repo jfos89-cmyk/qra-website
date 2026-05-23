@@ -2,8 +2,15 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { ArrowRight } from 'lucide-react';
 import { useState } from 'react';
+import { usePageMeta } from '@/hooks/usePageMeta';
 
 export default function Home() {
+  usePageMeta({
+    title: 'QRA Strategies: Medical Device Regulatory Consulting',
+    description: 'QRA Strategies delivers precision regulatory execution and Quality Management System buildout for MedTech startups. Accelerating the path from innovation to patient.',
+    canonical: 'https://qrastrategies.com/',
+  });
+
   const [formData, setFormData] = useState({
     name: '',
     company: '',

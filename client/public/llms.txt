@@ -1,0 +1,27 @@
+# QRA Strategies LLC
+
+> Medical device regulatory consulting and Quality Management System (QMS) buildout for MedTech startups.
+
+QRA Strategies LLC is a specialized regulatory consulting firm that partners with MedTech startups and emerging medical device companies to build audit-ready Quality Management Systems and navigate FDA, CE Mark, ISO 13485, and MDSAP compliance requirements.
+
+## Services
+
+- **QMS Buildout**: Design and implementation of ISO 13485-compliant Quality Management Systems proportionate to company stage
+- **FDA Regulatory Strategy**: 510(k) submissions, De Novo applications, PMA strategy, and pre-submission meetings
+- **CE Mark / MDR Compliance**: EU Medical Device Regulation (MDR 2017/745) technical documentation and conformity assessment
+- **MDSAP Certification**: Multi-jurisdictional regulatory compliance for US, Canada, Brazil, Australia, and Japan
+- **Regulatory Due Diligence**: Pre-investment and pre-acquisition regulatory risk assessments
+- **Audit Readiness**: Gap analysis, CAPA management, and audit preparation
+
+## Contact
+
+- Website: https://qrastrategies.com
+- Email: genevieve@qrastrategies.com
+- LinkedIn: https://www.linkedin.com/company/qra-strategies-llc
+
+## Pages
+
+- [Home](https://qrastrategies.com/)
+- [About](https://qrastrategies.com/about)
+- [Services](https://qrastrategies.com/services)
+- [Contact](https://qrastrategies.com/contact)

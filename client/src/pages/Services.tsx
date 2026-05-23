@@ -1,6 +1,7 @@
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { CheckCircle2 } from 'lucide-react';
+import { usePageMeta } from '@/hooks/usePageMeta';
 
 const services = [
   {
@@ -31,6 +32,12 @@ const services = [
 ];
 
 export default function Services() {
+  usePageMeta({
+    title: 'Regulatory Services — QRA Strategies | QMS, FDA, CE Mark, MDSAP',
+    description: 'QRA Strategies offers QMS buildout, FDA 510(k) submissions, CE Mark compliance, MDSAP certification, and regulatory due diligence for medical device companies.',
+    canonical: 'https://qrastrategies.com/services',
+  });
+
   return (
     <div className="min-h-screen flex flex-col bg-white">
       <Navigation />

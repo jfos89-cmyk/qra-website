@@ -2,8 +2,15 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { ArrowRight } from 'lucide-react';
 import { useState } from 'react';
+import { usePageMeta } from '@/hooks/usePageMeta';
 
 export default function Contact() {
+  usePageMeta({
+    title: 'Contact QRA Strategies — Medical Device Regulatory Consulting',
+    description: 'Get in touch with QRA Strategies LLC to discuss your medical device regulatory and QMS needs. We partner with MedTech startups to accelerate compliance.',
+    canonical: 'https://qrastrategies.com/contact',
+  });
+
   const [formData, setFormData] = useState({
     name: '',
     company: '',
